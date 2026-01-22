@@ -1,0 +1,78 @@
+.site-header {
+    background-color: #f2f2f2;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-bar {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.nav-left a,
+.nav-right a {
+    margin-right: 15px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+}
+
+.nav-bar a:hover {
+    text-decoration: underline;
+}
+
+.site-footer {
+    background-color: #f2f2f2;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section h4 {
+    margin-bottom: 8px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    padding: 0;
+}
+
+.footer-section button:hover {
+    text-decoration: underline;
+}
+
+.payments span {
+    margin-right: 8px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 15px;
+    color: #555;
+}
+
+.hidden {
+    display: none;
+}

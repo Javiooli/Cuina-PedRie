@@ -1,20 +1,26 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{% block title %}My Site{% endblock %}</title>
+    <title>{% block title %}PedRie{% endblock %}</title>
 </head>
 <body>
 
-<header>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/recipes/">Recipes</a>
-        <a href="/faqs/">FAQs</a>
-        {% if user.is_authenticated %}
-            <a href="/logout/">Logout</a>
-        {% else %}
-            <a href="/login/">Login</a>
-        {% endif %}
+<header class="site-header">
+    <nav class="nav-bar">
+        <div class="nav-left">
+            <a href="/">Home</a>
+            <a href="/faqs/">FAQs</a>
+        </div>
+        <div class="nav-right">
+            {% if user.is_authenticated %}
+                <a href="/logout/">Logout</a>
+                <a href="/recipes/">Receptes</a>
+                <a href="/enter_recipes/">Crear una recepta</a>
+            {% else %}
+                <a href="/login/">Login</a>
+            {% endif %}
+        </div>
     </nav>
 </header>
 
@@ -22,8 +28,41 @@
     {% block content %}{% endblock %}
 </main>
 
-<footer>
-    <p>© 2026 My Django Project</p>
+<footer class="site-footer">
+    <div class="footer-content">
+
+        <!-- Xarxes socials -->
+        <div class="footer-section">
+            <h4>Xarxes socials</h4>
+            <ul>
+                <li>Instagram</li>
+                <li>Facebook</li>
+                <li>X (Twitter)</li>
+            </ul>
+        </div>
+
+        <!-- Informació de l'entitat -->
+        <div class="footer-section">
+            <h4>Cuina</h4>
+            <p>PedRie</p>
+            <p>INS Daniel Blanxart i Pedrals</p>
+        </div>
+
+        <!-- Pagaments -->
+        <div class="footer-section">
+            <h4>Pagaments acceptats</h4>
+            <div class="payments">
+                <span>PayPal</span>
+                <span>Visa</span>
+                <span>Mastercard</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 PedRie – Javier Pedragosa i Guillem Riera</p>
+    </div>
 </footer>
 
 </body>
