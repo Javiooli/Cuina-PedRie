@@ -5,7 +5,6 @@ def preview_base(request):
     return render(request, "home/preview.html")
 
 def home(request):
-<<<<<<< Updated upstream
     return render(request, "home/home.html", {
         "pagina": "home",
     })
@@ -14,7 +13,3 @@ def error(request):
     return render(request, "home/home.html", {
         "pagina": "error"
     })
-=======
-    
-    return render(request, "home/home.html")
->>>>>>> Stashed changes
