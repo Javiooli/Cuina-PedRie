@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}PedRie - Receptes{% endblock %}
+{% block content %}
+  <div class="container">
+
+    <!-- PÁGINA RECEPTES -->
+    {% if pagina == 'recipes' or pagina == 'home' %}
+      <h1>Receptes</h1>
+      <div class="info">
+        <h2>Receptes destacades</h2>
+        <p>Selecciona una recepta per veure els detalls.</p>
+      </div>
+
+      <div class="info">
+        <ul>
+          <li>
+            <strong>Truita de patates</strong> · 30 min · 4 racions
+          </li>
+          <li>
+            <strong>Pa amb tomàquet i pernil</strong> · 10 min · 2 racions
+          </li>
+          <li>
+            <strong>Escudella catalana</strong> · 2 h · 6 racions
+          </li>
+          <li>
+            <strong>Fideuà de marisc</strong> · 45 min · 4 racions
+          </li>
+          <li>
+            <strong>Crema catalana</strong> · 50 min · 6 racions
+          </li>
+        </ul>
+      </div>
+
+    <!-- PÁGINA ERROR -->
+    {% elif pagina == 'error' %}
+      <h1>Error</h1>
+      <div class="info">
+        <p>{{ missatge }}</p>
+        <p><a href="{% url 'home' %}">Tornar al inici</a></p>
+      </div>
+    {% endif %}
+
+  </div>
+{% endblock %}
