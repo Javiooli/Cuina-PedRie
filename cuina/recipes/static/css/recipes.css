@@ -1,0 +1,11 @@
+.recipes-page .info ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.recipes-page .info ul li strong {
+    color: #3a2718;
+}

@@ -1,0 +1,17 @@
+.enter-recipes-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.enter-recipes-page form p {
+    margin: 0;
+}
+
+.enter-recipes-page form button[value="draft"] {
+    background: #b07a50;
+}
+
+.enter-recipes-page form button[value="draft"]:hover {
+    background: #8f5f3b;
+}

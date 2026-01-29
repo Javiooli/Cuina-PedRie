@@ -1,14 +1,86 @@
 {% extends "base.html" %}
-{% block title %}PedRie - Home{% endblock %}
+{% load static %}
+{% block title %}PedRie - Registre{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'users/css/users.css' %}">{% endblock %}
 {% block content %}
-  <div class="container">
-    
-    <!-- PÁGINA HOME -->
-    {% if pagina == 'home' %}
-    <h1>Home</h1>
+  <div class="container users-page">
+
+    <!-- PÁGINA REGISTRE -->
+    {% if pagina == 'register' or pagina == 'home' %}
+      <h1>Registre</h1>
       <div class="info">
-        <h2>Benvinguts a la cuina PedRie!</h2>
-        <p>Clica en una recepta o afegeix una de nova </p>
+        <h2>Crea el teu compte</h2>
+        <p>Omple el formulari per començar a compartir receptes.</p>
+      </div>
+
+      <div class="info">
+        <form method="post">
+          {% csrf_token %}
+
+          <p>
+            <label for="full_name"><strong>Nom complet</strong></label><br />
+            <input
+              type="text"
+              id="full_name"
+              name="full_name"
+              placeholder="Nom i cognoms"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="email"><strong>Correu electrònic</strong></label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="nom@exemple.com"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="username"><strong>Nom d'usuari</strong></label><br />
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="nomusuari"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="password"><strong>Contrasenya</strong></label><br />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="********"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="password_confirm"><strong>Confirma la contrasenya</strong></label><br />
+            <input
+              type="password"
+              id="password_confirm"
+              name="password_confirm"
+              placeholder="********"
+              required
+            />
+          </p>
+
+          <p>
+            <button type="submit">Crear compte</button>
+          </p>
+
+          <p>
+            Ja tens compte?
+            <a href="{% url 'login' %}">Inicia sessió</a>
+          </p>
+        </form>
       </div>
 
     <!-- PÁGINA ERROR -->

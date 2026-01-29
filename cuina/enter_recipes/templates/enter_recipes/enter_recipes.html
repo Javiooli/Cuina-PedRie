@@ -1,14 +1,60 @@
 {% extends "base.html" %}
-{% block title %}PedRie - Home{% endblock %}
+{% load static %}
+{% block title %}PedRie - Nova recepta{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'enter_recipes/css/enter_recipes.css' %}">{% endblock %}
 {% block content %}
-  <div class="container">
-    
-    <!-- PÁGINA HOME -->
-    {% if pagina == 'home' %}
-    <h1>Home</h1>
+  <div class="container enter-recipes-page">
+
+    <!-- PÁGINA NOVA RECEPTA -->
+    {% if pagina == 'enter_recipes' %}
+      <h1>Nova recepta</h1>
       <div class="info">
-        <h2>Benvinguts a la cuina PedRie!</h2>
-        <p>Clica en una recepta o afegeix una de nova </p>
+        <h2>Comparteix la teva recepta</h2>
+        <p>Omple el formulari per crear una nova recepta.</p>
+      </div>
+
+      <div class="info">
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+
+          <p>
+            <label for="title"><strong>Títol</strong></label><br />
+            <input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Ex. Truita de patates"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="images"><strong>Imatges</strong></label><br />
+            <input
+              type="file"
+              id="images"
+              name="images"
+              accept="image/*"
+              multiple
+            />
+          </p>
+
+          <p>
+            <label for="content"><strong>Recepta</strong></label><br />
+            <textarea
+              id="content"
+              name="content"
+              rows="8"
+              placeholder="Ingredients i passos..."
+              required
+            ></textarea>
+          </p>
+
+          <p>
+            <button type="submit" name="action" value="submit">Publicar</button>
+            <button type="submit" name="action" value="draft">Desar esborrany</button>
+          </p>
+        </form>
       </div>
 
     <!-- PÁGINA ERROR -->

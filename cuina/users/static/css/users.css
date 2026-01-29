@@ -1,0 +1,13 @@
+.users-page .info form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.users-page .info form p {
+    margin: 0;
+}
+
+.users-page .info a {
+    color: #7a4b2a;
+}
