@@ -1,14 +1,41 @@
 {% extends "base.html" %}
-{% block title %}PedRie - Home{% endblock %}
+{% load static %}
+{% block title %}PedRie - FAQs{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'faqs/css/faqs.css' %}">{% endblock %}
 {% block content %}
-  <div class="container">
-    
-    <!-- PÁGINA HOME -->
-    {% if pagina == 'home' %}
-    <h1>Home</h1>
+  <div class="container faqs-page">
+
+    <!-- PÁGINA FAQS -->
+    {% if pagina == 'faqs' %}
+      <h1>FAQs</h1>
       <div class="info">
-        <h2>Benvinguts a la cuina PedRie!</h2>
-        <p>Clica en una recepta o afegeix una de nova </p>
+        <h2>Preguntes freqüents</h2>
+        <p>Si tens dubtes, potser la resposta és aquí.</p>
+      </div>
+
+      <div class="info">
+        <ul>
+          <li>
+            <strong>Com puc afegir una recepta?</strong><br />
+            Ves a “Nova recepta” i omple el formulari.
+          </li>
+          <li>
+            <strong>Puc desar una recepta com a esborrany?</strong><br />
+            Sí, utilitza el botó “Desar esborrany”.
+          </li>
+          <li>
+            <strong>Quins formats d’imatge s’accepten?</strong><br />
+            Acceptem JPG, PNG i WEBP.
+          </li>
+          <li>
+            <strong>On puc veure totes les receptes?</strong><br />
+            A la secció “Receptes” del menú principal.
+          </li>
+          <li>
+            <strong>Com puc editar una recepta publicada?</strong><br />
+            Obre la recepta i fes clic a “Editar”.
+          </li>
+        </ul>
       </div>
 
     <!-- PÁGINA ERROR -->
