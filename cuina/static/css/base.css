@@ -105,40 +105,71 @@ form a:hover {
 
 .site-header {
     background-color: #fff6ee;
-    padding: 15px 0;
+    padding: 2px 0;
+    border-bottom: 1px solid #f2e0cf;
 }
 
 .nav-bar {
     display: flex;
     flex-direction: row;
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
+    max-width: 100%;
+    margin: 0;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
-    padding: 0 20px;
+    gap: 16px;
+    padding: 0 6px;
 }
 
 .navbar_logo {
+    display: block;
+    width: 100px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.nav-left,
+.nav-right {
     display: flex;
-    max-width: 10em;
-    max-height: 10em;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.nav-right {
+    margin-left: auto;
 }
 
 .nav-left a,
 .nav-right a {
-    margin-right: 15px;
+    margin-right: 0;
 }
 
 .nav-bar a {
     text-decoration: none;
     color: #333;
     font-size: 20px;
+    padding: 6px 50px;
+    border-radius: 999px;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.nav-bar a:hover {
-    text-decoration: underline;
+.nav-left a:hover,
+.nav-right a:hover {
+    background-color: #f2e0cf;
+}
+
+.nav-left a:focus-visible,
+.nav-right a:focus-visible {
+    outline: 2px solid #7a4b2a;
+    outline-offset: 2px;
+}
+
+.nav-left a.active,
+.nav-right a.active,
+.nav-left a[aria-current="page"],
+.nav-right a[aria-current="page"] {
+    background-color: #e6cbb1;
+    color: #2d2a26;
 }
 
 .site-footer {
