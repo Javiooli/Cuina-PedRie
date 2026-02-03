@@ -26,4 +26,5 @@ urlpatterns = [
     path("faqs/", include("faqs.urls")),
     path("recipes/", include("recipes.urls")),
     path("users/", include("users.urls")),
+    path("admin_requests/", include ("admin_requests.urls")),
 ]

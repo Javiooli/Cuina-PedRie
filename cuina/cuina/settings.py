@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'faqs',
     'users',
     'recipes',
-    'enter_recipes'
+    'enter_recipes',
+    'admin_requests'
 ]
 
 MIDDLEWARE = [
