@@ -43,12 +43,43 @@
             </div>
         </div>
 
+        <!-- Polítiques -->
+        <div class="footer-section">
+            <h4>Polítiques</h4>
+            <ul>
+                <li><a href="#cookies-policy">Política de cookies</a></li>
+                <li><a href="#privacy-policy">Política de privacitat</a></li>
+                <li><a href="#terms">Termes de servei</a></li>
+            </ul>
+        </div>
+
     </div>
 
     <div class="footer-bottom">
         <p>© 2026 PedRie – Javier Pedragosa i Guillem Riera</p>
     </div>
 </footer>
+
+<script>
+    function toggleAccordion(button) {
+        const accordionItem = button.parentElement;
+        const icon = button.querySelector('.accordion-icon');
+        const isOpen = accordionItem.classList.contains('active');
+
+        // Cerrar todos los otros items
+        document.querySelectorAll('.accordion-item').forEach(item => {
+            if (item !== accordionItem && item.classList.contains('active')) {
+                item.classList.remove('active');
+                const otherIcon = item.querySelector('.accordion-icon');
+                otherIcon.textContent = '+';
+            }
+        });
+
+        // Alternar el item actual
+        accordionItem.classList.toggle('active');
+        icon.textContent = isOpen ? '+' : '−';
+    }
+</script>
 
 </body>
 </html>

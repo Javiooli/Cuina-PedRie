@@ -8,88 +8,27 @@
     <!-- PÁGINA HOME -->
     {% if pagina == 'home' %}
     
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="hero-content">
-        <h1>Benvinguts a PedRie Cuina</h1>
-        <p>Descobreix delicioses receptes elaborades amb passion i qualitat</p>
-        <div class="hero-buttons">
-          <a href="{% url 'recipes' %}" class="btn btn-primary">Veure Receptes</a>
-          <a href="{% url 'enter_recipes' %}" class="btn btn-secondary">Afegir Recepta</a>
-        </div>
-      </div>
-      <div class="hero-image">
-        <img src="{% static 'images/hero-cooking.png' %}" alt="Cuina PedRie" onerror="this.style.display='none'">
-      </div>
-    </section>
 
-    <!-- Features Section -->
-    <section class="features-section">
-      <h2>Per què triar PedRie?</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <h3>Receptes Variades</h3>
-          <p>Descobreix una ampla col·lecció de receptes de cuina tradicional i moderna</p>
-        </div>
-        <div class="feature-card">
-          <h3>Fàcils de Fer</h3>
-          <p>Totes les receptes estan explicades pas a pas per a qualsevol nivell</p>
-        </div>
-        <div class="feature-card">
-          <h3>Qualitat Garantida</h3>
-          <p>Receptes seleccionades i verificades per experts en cuina</p>
-        </div>
-        <div class="feature-card">
-          <h3>Comunitat</h3>
-          <p>Comparteix les teves receptes amb altres cuiners i aprèn dels millors</p>
-        </div>
-      </div>
-    </section>
 
-    <!-- Recent Recipes Section -->
-    <section class="recent-recipes-section">
-      <h2>Últimes Receptes Afegides</h2>
-      <div class="recipes-preview">
-        <div class="recipe-card">
-          <h3>Pasta Fresca Casera</h3>
-          <p>Aprèn a fer pasta fresca com un autèntic italià</p>
-          <a href="{% url 'recipes' %}" class="btn-link">Veure Recepta →</a>
+    <!-- ABOUT -->
+    <section class="about-section">
+      <h2>Sobre PedRie</h2>
+      <div class="about-content">
+        <div class="about-box">
+          <h3>La Nostra Història</h3>
+          <p>PedRie va néixer el <strong>15 de setembre de 2023</strong> com a projecte d'estudiants de cuina de l'INS Daniel Blanxart i Pedrals, amb la visió de crear una comunitat on compartir les millors receptes tradicionals i innovadores de la cuina hispanoparlant.</p>
         </div>
-        <div class="recipe-card">
-          <h3>Paella Valenciana</h3>
-          <p>Una recepta tradicional de la Comunitat Valenciana</p>
-          <a href="{% url 'recipes' %}" class="btn-link">Veure Recepta →</a>
+        <div class="about-box">
+          <h3>El Nostre Motiu</h3>
+          <p>Creiem que la cuina és un art que s'ha de compartir. Ens movia la passió per preservar les receptes tradicionals de les nostres abueles mentre exploríem noves tècniques culinàries. Volem que tothom, sigui qual sigui el seu nivell, pugui aprendre a cuinar amb confiança i gaudir del procés.</p>
         </div>
-        <div class="recipe-card">
-          <h3>Pastissos de Senyora</h3>
-          <p>Els pastissos més tradicionals de la cuina catalana</p>
-          <a href="{% url 'recipes' %}" class="btn-link">Veure Recepta →</a>
+        <div class="about-box">
+          <h3>On Estem</h3>
+          <p>Nascuts a <strong>Barcelona, Catalunya</strong>, l'INS Daniel Blanxart i Pedrals és la nostra llar. Aquesta institució emblemàtica és el cor de PedRie, on es desenvolupen les millors idees i es creen connexions entre joves amants de la cuina de tot el país.</p>
         </div>
-      </div>
-      <div class="view-all-button">
-        <a href="{% url 'recipes' %}" class="btn btn-outline">Veure totes les Receptes</a>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-      <h2>Tens una recepta especial?</h2>
-      <p>Comparteix les teves receptes preferides amb la comunitat PedRie</p>
-      <a href="{% url 'enter_recipes' %}" class="btn btn-primary">Afegir la Meva Recepta</a>
-    </section>
-
-    <!-- Info Section -->
-    <section class="info-section">
-      <div class="info-grid">
-        <div class="info-box">
-          <h3>Tens preguntes?</h3>
-          <p>Consulta les nostres preguntes freqüents per trobar resposta als dubtes més comuns</p>
-          <a href="{% url 'faqs' %}" class="btn-link">Anar a FAQs →</a>
-        </div>
-        <div class="info-box">
-          <h3>Contacte</h3>
-          <p>Si tens alguna consulta o suggeriment, no dubtis en posar-te en contacte amb nosaltres</p>
-          <a href="{% url 'admin_requests' %}" class="btn-link">Contactar →</a>
+        <div class="about-box">
+          <h3>Les Nostres Aficions</h3>
+          <p>Més allà de la cuina, l'equip de PedRie està integrat per persones amb interessos variats: gastronòmia experimental, fotografia de menjar, viatges culinaris, agricultura sostenible, nutrició i bienestar. Creiem que la cuina és la intersecció perfecta entre cultura, art, ciència i salut.</p>
         </div>
       </div>
     </section>
